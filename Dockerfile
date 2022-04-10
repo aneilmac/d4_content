@@ -4,6 +4,7 @@ USER root
 
 RUN mkdir /home/$NB_USER/d4
 COPY notebook/*.ipynb /home/$NB_USER/d4/
+COPY notebook/*.hs /home/$NB_USER/d4/
 COPY notebook/images /home/$NB_USER/d4/images
 RUN chown --recursive $NB_UID:users /home/$NB_USER/d4
 
